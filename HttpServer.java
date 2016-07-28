@@ -20,7 +20,7 @@ public class HttpServer
 		File file = new File(dir+"\\config.pro");
 		if(!file.exists())
 		{
-			System.out.println("ÕÒ²»µ½ÎÄ¼ş");
+			System.out.println("æ‰¾ä¸åˆ°æ–‡ä»¶");
 			System.exit(0);
 		}
 		Properties property =new Properties();
@@ -28,18 +28,18 @@ public class HttpServer
 		String appDir = (String)property.get("dir");
 		if(appDir==null)
 		{
-			System.out.println("ÊôĞÔÉèÖÃ´íÎó");
+			System.out.println("å±æ€§è®¾ç½®é”™è¯¯");
 			System.exit(0);
 		}
 		if(!(new File(appDir).isDirectory()))
 		{
-			System.out.println("ÊôĞÔÉèÖÃ´íÎó");
+			System.out.println("å±æ€§è®¾ç½®é”™è¯¯");
 			System.exit(0);
 		}
 		String pro = (String)property.get("port");
 		if(pro==null)
 		{
-			System.out.println("ÊôĞÔÉèÖÃ´íÎó");
+			System.out.println("å±æ€§è®¾ç½®é”™è¯¯");
 			System.exit(0);
 		}
 		ServerSocket server = new ServerSocket(java.lang.Integer.valueOf(pro));
